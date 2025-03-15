@@ -60,7 +60,7 @@ class Game:
 
             if not self.game_over:
                 if self.score > int(self.hs):
-                    with open('../resources/high_score.txt', 'w') as file:
+                    with open('resources/high_score.txt', 'w') as file:
                         file.write(str(self.score))
 
                 if self.score >= 20 and self.count % 50 == 0:
