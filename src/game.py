@@ -60,7 +60,7 @@ class Game:
 
             if not self.game_over:
                 if self.score > int(self.hs):
-                    with open('resources/high_score.txt', 'w') as file:
+                    with open('../resources/high_score.txt', 'w') as file:
                         file.write(str(self.score))
 
                 if self.score >= 20 and self.count % 50 == 0:
@@ -83,8 +83,7 @@ class Game:
                             self.gnomes.pop(self.gnomes.index(g))
                             self.projectiles.pop(self.projectiles.index(p))
                             self.score += 1
-                            print(self.score)
-                    #Если гном стукнул игрока
+                            #Если гном стукнул игрока
                     if (((g.x <= self.player_game.x <= g.x + g.width) or (g.x <= self.player_game.x + self.player_game.width <= g.x + g.width)) and
                     ((g.y <= self.player_game.y <= g.y + g.height) or (g.y <= self.player_game.y + self.player_game.height <= g.y + g.height))):
                         self.lives -= 1
