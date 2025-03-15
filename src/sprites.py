@@ -40,7 +40,6 @@ class Player:
     def draw(self, screen):
         screen.blit(self.image, (self.x, self.y))
 
-
 class Projectile:
     def __init__(self, x, y):
         self.image = beer

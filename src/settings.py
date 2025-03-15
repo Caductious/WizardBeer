@@ -13,7 +13,7 @@ beer = pygame.image.load('resources/images/beer.png')
 pygame.font.init()
 font = pygame.font.Font('resources/fonts/Vezitsa.ttf', 56)
 
-with open('high_score.txt', 'r') as file:
+with open('resources/high_score.txt', 'r') as file:
     hs = file.readline()
 
 music_path = 'resources/audio/gnome_music.mp3'

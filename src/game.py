@@ -57,19 +57,24 @@ class Game:
             # Держим цикл на правильной скорости
             self.clock.tick(FPS)
             self.count += self.hard_level
+
             if not self.game_over:
                 if self.score > int(self.hs):
-                    with open('high_score.txt', 'w') as file:
+                    with open('resources/high_score.txt', 'w') as file:
                         file.write(str(self.score))
+
                 if self.score >= 20 and self.count % 50 == 0:
                     self.hard_level = 5
+
                 for p in self.projectiles:
                     p.beer_cast()
-                self.new_high_score = 20
+
                 if self.count % 50 == 0:
                     self.gnomes.append(Gnome())
                     self.laugh.play()
+
                 self.player_game.movement()
+
                 for g in self.gnomes:
                     #Если гном стукнул проджектайл
                     for p in self.projectiles:
