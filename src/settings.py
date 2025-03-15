@@ -11,11 +11,14 @@ gnome = [pygame.image.load('resources/images/gnome.png'), pygame.image.load('res
 beer = pygame.image.load('resources/images/beer.png')
 
 pygame.font.init()
-font = pygame.font.Font('resources/fonts/Vezitsa.ttf', 60)
+font = pygame.font.Font('resources/fonts/Vezitsa.ttf', 56)
 
 with open('high_score.txt', 'r') as file:
     hs = file.readline()
-    high_score = font.render(hs, True, 'Yellow')
 
 music_path = 'resources/audio/gnome_music.mp3'
 laugh_path = 'resources/audio/hihi.mp3'
+
+count = 0
+lives = 3
+score = 0
